@@ -1,0 +1,42 @@
+Safe Paths
+There are n cities numbered from 1 to n and there are n — 1 bi-directional roads such that all cities are connected.
+There are k trees, each one is in a different city. You are currently in the 1st city.You want to visit city X such that neither X nor the cities in the path from 1 to X has a tree. Find out how many such X you can visit(X != 1).
+
+Input Format
+• First line: Integers n, k representing the number of cities and number of trees respectively
+• Next n — 1 lines: Two integers u[i] and v[i] meaning there is a road between cities u[i] and v[i]
+• Next line: k integers p[1], p[2], p[3], ... ,p[k] where there is a tree at p[i] city
+
+Output Format
+Print a single integer denoting the number of cities you can visit.
+
+Input Constraints
+1 ≤ n ≤ 10^5
+0 ≤ k ≤ n
+1 ≤ u[i], v[i] ≤ n; u[i] ≠ v[i]
+2 ≤ p[i] ≤ n
+
+Sample Input
+6 3
+1 2
+1 6
+2 3
+2 4
+2 5
+2 3 4
+
+Sample Output
+1
+
+Explanation
+There are a total of 5 possibilities
+1. 1 -> 2
+2. 1 -> 2 -> 3
+3. 1 -> 2 -> 4
+4. 1 -> 2 -> 5
+5. 1 -> 6
+In the first 4 cases, the 2nd city has a tree, so he can't go to the 2nd, 3rd, 4th, and 5th city. But in the 5th case, none of the cities on the simple path have trees. Therefore, he can go to the 6th city.
+
+Time Limit : 1.0 sec for each test case
+Memory Limit : 256 MB
+Source Limit : 1024 KB

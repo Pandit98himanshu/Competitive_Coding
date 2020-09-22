@@ -1,0 +1,44 @@
+Travel to cities
+You want to travel from city U to city V. You can travel exactly once by roadways and railways.
+You start from city U and go to some city Z by roadways only. You can traverse one or more than one edges between U and Z by road. From city Z, you can go to city V by railways only. You can use railways one or more than one time between city Z and city V. Also, you can go from city U to city Z by railways only and then from city Z to city V by roadways only.
+You are given the distance between all the cities. You have a map that shows not only the paths connecting to all the cities with roadways but also shows all paths connecting all the cities by railways.
+Determine the minimum total distance that you must travel such that you can travel from city U to city V and travel by both roadways and railways exactly once.
+
+Input format
+• First line contains a single integer N denoting the number of cities.
+• Next N lines follow, where each line containsN space-separated natural numbers. These N lines represent the roadways distance-matrix of size N x N. Here, A[i][j] represents the length of the road from city i to city j.
+• Next N lines follow, where each contains N space-separated natural numbers. These N lines represent the railways distance-matrix of size N x N. Here, 
+B[i][j] represents the length of the railway from city i to city j.
+• The last line contains two space-separated integers U and V denoting the starting and ending points.
+
+Output format
+Print a single natural number that represents the minimum distance that you must travel.
+
+Constraints
+2 ≤ N ≤ 1250
+0 ≤ A[i][j], B[i][j] ≤ 100
+1 ≤ U, V ≤ N
+U ≠ V
+
+Sample Input
+3
+0 1 2
+3 0 4
+5 6 0
+0 6 5
+1 0 4
+3 2 0
+1 2
+
+Sample Output
+4
+
+Explanation
+Xenny can go from 1 to 3 by roadway, and 3 to 2 by railway.
+Distance between 1 and 3 by roadway = 2
+Distance between 3 and 2 by railway = 2
+Total distance travelled = 4
+
+Time Limit : 1.0 sec for each test case
+Memory Limit : 256 MB
+Source Limit : 1024 KB

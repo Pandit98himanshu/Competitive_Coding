@@ -1,0 +1,32 @@
+Maximum XOR-sum of a good subsequence :
+
+You are given an array A of n elements as follows:
+{a[1], a[2], a[3],.........., a[n]}
+You need to find the maximum possible xor sum of any good subsequence of arrayA
+Note: A subsequence S is defined as good if the following condition is satisfied:
+For every a[i] present in S, a[n-i+1] is also present in S
+
+Input format
+• First line: Integer n denoting the size of the array
+• Second line: n space-separated integers denoting elements of the array A
+
+Output format
+• Print a single integer denoting the maximum xor-sum of any good subsequence.
+
+Constraints
+1 ≤ N ≤ 40
+1 ≤ a[i] ≤ 10^9
+
+Sample Input
+8
+1 2 3 4 5 6 7 8
+
+Sample Output
+13
+
+Explanation
+For the above sample input maximum xor-sum of one of the possible good subsequence will be [1 ⨁ 8 ⨁ 3 ⨁ 6 ⨁ 4 ⨁ 5] = 13
+
+Time Limit : 1.0 sec for each test case
+Memory Limit : 256 MB
+Source Limit : 1024 KB
