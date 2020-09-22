@@ -1,0 +1,64 @@
+Digit Sum
+Given a positive integer N. Your task is to check if the sum of 1st and last digit of the number is equal to the sum of all remaining digits.
+Input: First line of input contains number of testcases T. For each testcase, there will be a single line containing a positive integer N.
+Output: For each testcase, print "YES" or "NO" (without quotes).
+
+Task: Your task is to complete the function given in the text area. No need to worry about input and output.
+Constraints: 1 <= T < 100 1 <= N <= 106
+
+Example:
+ Input: 2 12345 10021
+ Output: NO YES
+ Explanation: Testcase 1: Sum of first and last digit is 1 + 5 = 6 which is not equal to sum of remaining digit which is equal to 9. Testcase 2: Sum of first and last digit is 1 + 1 = 2 which is equal to sum of remaining digit which is equal to 2.
+
+
+Source code :-
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+void check(int);
+
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--)
+  {
+      int n;
+      cin>>n;
+      check(n);
+  }
+  return 0;
+}
+void check(int n)
+{
+    int length=0,i,r=0,m=n,c_sum=0,n_sum=0;
+    for(i=0;m!=0;i++)
+    {
+        m=m/10;
+        length++;
+    }
+    cout<<"length = "<<length<<"\n";
+    for(i=0;i<=(length-1);i++)
+    {
+        if(i==0||i==length-1)
+        {
+            r=n%10;
+            c_sum=c_sum+r;
+            n=n/10;
+        }
+        else
+        {
+            r = n%10;
+            n_sum=n_sum+r;
+            n=n/10;
+        }
+    }
+    cout<<"c_sum = "<<c_sum<<"\n";
+    cout<<"n_sum = "<<n_sum<<"\n";
+    if(c_sum==n_sum)
+    cout<<"YES\n";
+    else
+    cout<<"NO\n";
+}
