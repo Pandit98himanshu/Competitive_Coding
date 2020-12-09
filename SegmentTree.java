@@ -4,7 +4,7 @@ class SegmentTree
 {
 	/**
 	 * arr = elements given
-	 * tree = segnent tree of arr
+	 * tree = segment tree of arr
 	 * index = index of current node
 	 * start and end = range of node
 	 */
